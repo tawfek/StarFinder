@@ -1,5 +1,5 @@
 import React, { Component ,Fragment} from 'react';
-import Header from './components/header';
+import Header from '../components/header';
 import {Helmet} from "react-helmet";
 import { Comment, Avatar,Alert,Row,Col ,Timeline, Icon} from 'antd'
    class Howtouse extends Component {

@@ -3,6 +3,8 @@
 # dependencies
 /node_modules
 /api/vendor
+/api/.aws/credentials
+/api/client.php
 /.pnp
 .pnp.js
 

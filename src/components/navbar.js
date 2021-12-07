@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
-import Home from '../home'
+import Home from '../pages/home'
 // import './App.css';
-import Contact from '../contact'
-import Privacy from '../privacy'
-import Howtouse from '../howtouse'
+import Contact from '../pages/contact'
+import Privacy from '../pages/privacy'
+import Howtouse from '../pages/howtouse'
 import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css'
 import {Col,Row, Drawer,Menu, Button,Icon } from 'antd';

@@ -6,7 +6,10 @@ use Aws\S3\Exception\S3Exception;
 define('API_KEY','KEY') ;
 define('API_SECRET','SECRET')  ;
 try{
-    $credentials = new Aws\Credentials\Credentials(API_KEY, API_SECRET);
+    $credentials = new Aws\Credentials\Credentials(
+        API_KEY, 
+        API_SECRET);
+
     $options =[
         'version'     => 'latest',
         'region'      => 'us-west-2',

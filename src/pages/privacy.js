@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Header from './components/header';
+import Header from '../components/header';
 import {Row,Col,Icon} from 'antd'
 import {Helmet} from "react-helmet";
 

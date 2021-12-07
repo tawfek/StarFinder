@@ -1,10 +1,10 @@
 import React, { Component ,Fragment} from 'react';
 import {Skeleton,Col,Row,message,Upload,Progress,Icon } from 'antd';
-import CardData from './components/carddata'
-import Facebox from './components/Facebox'
+import CardData from '../components/carddata'
+import Facebox from '../components/Facebox'
 import {Helmet} from "react-helmet";
 
-import Header from './components/header' 
+import Header from '../components/header' 
 function getBase64(img, callback) {
   const reader = new FileReader();
   reader.addEventListener('load', () => callback(reader.result));
