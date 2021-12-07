@@ -1,0 +1,15 @@
+لازم تغير معلومات الامازون بالمعلومات الخاصة بيك 
+
+الملفات التحتاج تغيرها هي 
+/.aws/credentials
+المعلومات الي بداخله : 
+aws_access_key_id لازم تغيرة بالايدي الخاص بحسابك
+aws_secret_access_key ايضا تغيرة ومو المفروض احد يعرفه غيرك 
+
+/client.php
+المعلومات الي بداخله : 
+متغير : $credentials
+كلاس : new Aws\Credentials\Credentials 
+بيه متغيرين 
+المتغير الاول هو : aws_access_key_id 
+المتغير الثاني هو : aws_secret_access_key 

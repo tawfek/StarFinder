@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Literata&display=swap');
+:root{
+   --pcolor:#000 ;
+   --pdark:rgb(65, 65, 65) ;
+}
+body{
+  
+  background: url(/162.jpg);
+  
+   background-attachment: fixed;
+  background-clip: content-box;
+background-size: cover;
+background-position: right;
+
+}
+
+.menuBar{
+  padding: 0 20px;
+  overflow: hidden;
+  box-shadow:0 -3px 19px #1a1a1a;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  z-index: 100;
+  background: var(--pdark);
+  height: 10vh;
+}
+.bshadow{
+  border-radius: 4px;
+  box-shadow: 0 7px 19px #1f1f1f;
+ }
+.bshadow img{
+  border-radius: 5px 0 0 5px;
+  margin: 0 auto;
+  padding: 5px;
+  border-bottom-left-radius: 0 ;
+  border-bottom-right-radius: 0;
+  background: url(/border.jpg);
+  
+ }
+.logo{
+  width: 150px;
+  float: left;
+}
+.logo a{
+  display: inline-block;
+  font-size: 20px;
+  padding: 19px 20px;
+  text-transform: capitalize;
+}
+.menuCon{
+  background: var(--pdark) !important;
+  width: calc(100% - 150px);
+  float: left;
+}
+.menuCon .ant-menu-item{
+  padding: 0px 5px;
+}
+.menuCon .ant-menu-submenu-title{
+  padding: 10px 20px;
+}
+.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
+  padding: 10px 15px;
+}
+.menuCon .ant-menu-horizontal{
+  border-bottom: none;
+}
+.menuCon .leftMenu{
+  float: left;
+}
+.menuCon .rightMenu{
+  float: right;
+}
+.barsMenu{
+  float: right;
+  height: 32px;
+  padding: 6px;
+  margin-top: 8px;
+  display: none;
+  background: none;
+}
+.barsBtn{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--pcolor);
+  position: relative;
+}
+.barsBtn:after,.barsBtn:before{
+  content: attr(x);
+  width: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+  background: var(--pcolor);
+}
+.barsBtn:after{
+  top: auto;
+  bottom: -6px;
+}
+.ant-drawer-body{
+  padding: 0;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item, .ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu{
+  display: inline-block;
+  width: 100%;
+}
+.ant-drawer-body .ant-menu-horizontal{
+  border-bottom: none;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover{
+  border-bottom-color: transparent;
+}
+
+@media(max-width: 767px){
+  
+.menuBar{
+
+  height: 8vh;
+}
+  .barsMenu{
+    display: inline-block;
+  }
+  .leftMenu,.rightMenu{
+    display: none;
+  }
+  .logo a{
+    margin-left: -20px;
+  }
+  .menuCon .ant-menu-item, .menuCon .ant-menu-submenu-title{
+    padding: 1px 20px;
+  }
+  .logo a{
+    padding: 10px 20px;
+  }
+}
+.red{
+  background:#ff4040;
+  color:white;
+}
+.pcolor{
+  background: var(--pcolor)
+}
+.pcolor-text{
+ color: var(--pcolor);
+}
+.logo-text{
+  font-family: 'DM Serif Text', serif;
+  color: var(--pcolor) !important;
+  letter-spacing: 1px;
+  word-break: break-word;
+  line-height: 18px;
+  font-size: 20px;
+  position: relative;
+  top: -5.7vh;
+  display: block;
+  word-spacing: 100px !important;
+  left: 6vh;
+}
+.logo-text-sm{
+  font-family: 'DM Serif Text', serif;
+  color: var(--pcolor) !important;
+  letter-spacing: 1px;
+  word-break: break-word;
+  line-height: 18px;
+  font-size: 20px;
+  position: relative;
+  display: block;
+  width: 20vw ;
+  word-spacing: 200px !important;
+  left: 5.5vh;
+  top:-5.1vh ;
+  height: 0px;
+}
+.logo-icon{
+  font-family: 'Nanum Myeongjo', serif;
+
+  font-size: 5vh !important;
+}
+.logo-icon-sm{
+  font-size: 5vh !important;
+}
+.ant-upload,.av-img,.ant-upload.ant-upload-select-picture-card{
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  border: 0 ;
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  min-height: 20vh;}
+
+  .ant-upload.ant-upload-select-picture-card > .ant-upload{
+    padding: 0;
+  }
+
+  .ant-avatar-lg {
+    width: 60px;
+    height: auto;
+    max-height: 300px;
+    line-height: 40px;
+    border-radius:4px;
+    min-height: 90px;
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  
+  line-height: 160px;
+  background: rgb(204, 71, 71);
+  overflow: auto;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: rgb(224, 224, 224);
+}
+.img_slick{
+  width: 100%;
+  overflow: hidden;
+  min-height: 182px;
+  border-radius: 10px !important;
+  border:0 !important;
+  /* margin:10px ; */
+  box-shadow: 1px 3px 3px #333333;
+}
+/* .img_s{ */
+ /* display: flex; */
+ /* overflow-x: auto ; */
+/* } */
+.mov_box{
+
+  /* margin: 10px; */
+  /* padding: 0px; */
+  background: var(--pdark);
+  border:0 ;
+  /* background:  #fff  !important; */
+  /* background: yellow; */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.mov_col{
+  /* margin: 10px; */
+  /* padding: 10px; */
+  border: 0  !important;
+  margin: 0 !important;
+  border-radius: 10px;
+   border-radius: 10px !important;
+}
+.alice-carousel__stage-item{
+  margin:10px;
+  margin-bottom: 0 ;
+  margin-top: 0;
+  border:0  !important;
+  border-radius: 10px;
+}
+
+.trbody{
+  position: fixed;
+  content: "";
+  background:  linear-gradient(transparent, var(--pdark)),url(/bg.jpg);
+  width: 100%;
+  /* bottom:3.5em; */
+  top: 0;
+  height: 100vh;
+  background-size: contain;
+}
+ 
+
+
+.movies_title_h2{
+  text-align: left;
+  position: relative;
+  left: 3vh;
+}
+.ant-card-cover:hover .ant-card-cover::before{
+   content: "tofe" ;
+   position: red ;
+   background: red ;
+   color: yellowgreen ; 
+   z-index: 1000000;
+   width: 100%;height: 100%;;
+}
+.anotherbutton{
+  background:var(--pcolor);
+  background-image:url(/border.jpg);
+  border-radius:10px;
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+  margin:0;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  background-attachment: fixed;
+  background-size: cover;
+   transition: all 1s;
+}
+.anotherbutton:hover{
+ 
+  background-image:url(/border.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.biglogo{
+  text-align:center;
+  font-family: 'DM Serif Text', serif;
+}
+.card-define{
+  width: 100%;
+  font-family: initial;
+  align-content: left ; 
+  align-self: left;
+  text-align: left;
+  padding: 10px;
+  font-family: 'Literata', serif;
+
+  border-left: 1px solid rgb(204, 204, 204) ;
+  border-radius: 1px ;
+
+}
+
+ .pfont{
+  font-family: 'Nanum Myeongjo', serif;
+ }
+ .pbold{
+   font-weight: bold;
+ }
+ 
+ .htuimg{
+   width: 100%;
+   background:rgba(0,0,0,0) !important;
+ }
+
+ .customa{
+   color:#5d68ef !important;
+ }
+ .ppd{
+  border: 1px solid #22ade4;
+  border-radius: 10px !important;
+  box-shadow: 0px 0px 10px #22ade4;
+  background:white !important;
+ }
+ .btcd img{
+ 
+ }
+ .btcd{  border: 0.4px solid #FF9B22;
+  border-radius: 10px !important;
+  box-shadow:0px 0px 10px #d2d2d2;
+  padding:0 !important;
+  width:87px !important ;
+  height:87px !important ;
+  background:var(--pdark) !important;
+ }
+ .btcd img{
+  background:var(--pdark) !important;
+
+   width:100% !important ; height:100% !important ;
+ }
+
+
+ .white{
+   background:var(--pdark);
+   color:white !important ;
+   border-color: var(--pdark)
+ }
+ p,h1,h2,h3,h4,h5,h6,.ant-timeline-item{
+  color:white !important ;
+
+ }
+ .ant-menu-item a{
+   color:white !important;
+ }
+ 
+ .menuCon,.ant-upload.ant-upload-select-picture-card,.ant-upload,.ant-card-meta-title,.ant-card-meta-description,.ant-list-item-meta-title a,.ant-progress-circle .ant-progress-text{
+  background: var(--pdark) !important;
+  color:white !important;
+}
+
+
+
+.ant-list-bordered,.ant-list-bordered .ant-list-item{
+  border-color: rgb(126, 126, 126) !important ;
+}
+.ant-drawer-content{
+  background-color: var(--pdark);
+}
+.ant-progress-text{
+  width: auto !important ; margin:0 auto !important;
+
+} 

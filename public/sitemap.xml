@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<loc>https://starfinder.me/</loc>
+<lastmod>2019-07-17T11:54:15+00:00</lastmod>
+</url>
+<url>
+<loc>https://starfinder.me/howToUse</loc>
+<lastmod>2019-07-17T11:54:15+00:00</lastmod>
+</url>
+<url>
+<loc>https://starfinder.me/contact</loc>
+<lastmod>2019-07-17T11:54:15+00:00</lastmod>
+</url>
+<url>
+<loc>https://starfinder.me/privacy</loc>
+<lastmod>2019-07-17T11:54:15+00:00</lastmod>
+</url>
+</urlset>

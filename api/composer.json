@@ -1,0 +1,6 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.100",
+        "imdbphp/imdbphp": "^6.2"
+    }
+}
