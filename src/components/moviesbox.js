@@ -7,7 +7,7 @@ import AliceCarousel from 'react-alice-carousel';
  
  
   render() { 
-    if(this.props.data!==null){
+    if(this.props.data!==null && process.env.REACT_APP_IMDB_INFO_ENABLE){
 
       const handleOnDragStart = e => e.preventDefault()
       const { Meta } = Card;

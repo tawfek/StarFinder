@@ -1,6 +1,16 @@
 {
-    "require": {
-        "aws/aws-sdk-php": "^3.100",
-        "imdbphp/imdbphp": "^6.2"
-    }
+  "require": {
+    "aws/aws-sdk-php": "^3.100",
+    "imdbphp/imdbphp": "^6.2",
+    "freearhey/wikidata": "^3.6",
+    "tightenco/collect": "^8.75"
+  },
+  "autoload": {
+    "psr-4": {
+      "StarFinder\\": "src"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
 }

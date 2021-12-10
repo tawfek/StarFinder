@@ -1,6 +1,5 @@
 <?php 
-function cors() {
-
+function AllowCors() {
     // Allow from any origin
     if (isset($_SERVER['HTTP_ORIGIN'])) {
         // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
@@ -24,5 +23,5 @@ function cors() {
     }
 
 }
-cors()
+AllowCors()
 ?>

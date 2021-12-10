@@ -70,6 +70,7 @@ class Home extends Component {
          if(info.file.response.status!==undefined){
             message.error(info.file.response.message);
          }else{
+           console.log(info.file);
         message.error('Please try agin,An unexpected error hapend while uploading!');
          }
         this.setState({
@@ -113,8 +114,8 @@ class Home extends Component {
         listType="picture-card"
         className="avatar-uploader white"
         showUploadList={false}
-         action="https://v2.instauser.tk"
-         
+         action={process.env.REACT_APP_API_URL}
+          
         onProgress={this.handleProgress}
         beforeUpload={beforeUpload}
         onChange={this.handleChange}>

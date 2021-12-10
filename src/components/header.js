@@ -93,7 +93,7 @@ import {Switch,Col,Row,Icon,Card} from 'antd'
       </Col>
       <Col xs={24} sm={24} md={19} >
       <div className="card-define" >
-     <span role="img" aria-label="img"> 😍 </span>the best way to Find and detect celebrities,actors and famous people in the glob from picture online, get full information,movies and actors from the picture. free to use.
+    the best way to Find and detect celebrities,actors and famous people in the glob from picture online, get full information,movies and actors from the picture. free to use.
 </div>      </Col>
 </Card>
     </Row></Col>

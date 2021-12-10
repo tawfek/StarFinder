@@ -22,7 +22,7 @@ let cancel;
        Z = imdb_url.replace(new RegExp('.*' + nm_prefix), '');
        Z = imdb_url.split(nm_prefix).pop();
       Z=Z.substring(0,7); }else{Z=""}
-      const url ="https://v2.instauser.tk/imdb.php?mid="+Z
+      const url =`${process.env.REACT_APP_API_URL}/imdb.php?mid=${Z}`
      axios.request( {
        method: "get", 
        url: url, 
@@ -108,8 +108,8 @@ let cancel;
             avatar={
                <div style={{borderRadius:100,width:50,height:50,backgroundImage:`url(${this.props.src})`,backgroundPositionX:leftbox+"%",backgroundPositionY:topbox+"%",backgroundSize:boximage}}></div>
             }
-            title={<a style={{position:"relative",top:(celeb.imdb_url!=="")?"0":"15px"}}  onClick={(celeb.imdb_url!=="")?this.showDrawer.bind(this,celeb.imdb_url):(this.doNothing)} href="#!"><Icon theme="filled" type="star" style={{color:"yellow"}} /> {celeb.name}<br></br>
-            {(celeb.imdb_url!=="")?(<small style={{color:'lightgrey'}}>Click to get info</small>):''}
+            title={<a style={{position:"relative",top:(celeb.imdb_url!=="")?"0":"15px"}}  onClick={(celeb.imdb_url!=="" && process.env.REACT_APP_IMDB_INFO_ENABLE)?this.showDrawer.bind(this,celeb.imdb_url):(this.doNothing)} href="#!"><Icon theme="filled" type="star" style={{color:"yellow"}} /> {celeb.name}<br></br>
+            {(celeb.imdb_url!=="" && process.env.REACT_APP_IMDB_INFO_ENABLE)?(<small style={{color:'lightgrey'}}>Click to get info</small>):''}
             </a>}
             
           />
