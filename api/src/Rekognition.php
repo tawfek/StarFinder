@@ -21,15 +21,9 @@ class Rekognition
         $this->maxFileSizeInMB = $sizeInMB;
     }
 
-    public function json_response($response): string
-    {
-        return json_encode($response);
-    }
 
-    public function SendJsonHeader(): void
-    {
-        header('Content-Type: application/json');
-    }
+
+
     public function setError($error): void
     {
         array_push($this->errors, $error);
@@ -95,18 +89,24 @@ class Rekognition
 
             return $response;
         } catch (\Exception $e) {
-            $this->setError($e->getMessage()); 
+            $this->setError($e->getMessage());
         }
     }
 
     public function CelebrityCount()
     {
-        return count($this->result->get('CelebrityFaces')) ?? 0;
+        if ($this->result != null) {
+            return count($this->result->get('CelebrityFaces')) ?? 0;
+        }
+        return 0;
     }
 
     public function GetCelebrityFaces()
     {
-        return $this->result->get('CelebrityFaces') ?? [];
+        if ($this->result != null) {
+            return $this->result->get('CelebrityFaces') ?? [];
+        }
+        return [];
     }
 
     public function GetResult()
@@ -126,12 +126,18 @@ class Rekognition
     }
     public function getImdbUrls()
     {
-        return $this->getResult()->search('CelebrityFaces[].Urls[?starts_with(@,`www.imdb.com\/name\/`)]');
+        if ($this->getResult() != null) {
+            return $this->getResult()->search('CelebrityFaces[].Urls[?starts_with(@,`www.imdb.com\/name\/`)]');
+        }
+        return [];
     }
 
     public function getWikiUrls()
     {
-        return $this->getResult()->search('CelebrityFaces[].Urls[?starts_with(@,`www.wikidata.org\/wiki\/`)]');
+        if ($this->getResult() != null) {
+            return $this->getResult()->search('CelebrityFaces[].Urls[?starts_with(@,`www.wikidata.org\/wiki\/`)]');
+        }
+        return [];
     }
 
     public function Detection($options, $checkFile = true, $errors = true)
@@ -152,6 +158,6 @@ class Rekognition
             $response['wiki_urls'] =  $this->getWikiUrls();
         }
 
-        return $this->json_response($response);
+        return ($response);
     }
 }

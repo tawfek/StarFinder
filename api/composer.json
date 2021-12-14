@@ -3,7 +3,8 @@
     "aws/aws-sdk-php": "^3.100",
     "imdbphp/imdbphp": "^6.2",
     "freearhey/wikidata": "^3.6",
-    "tightenco/collect": "^8.75"
+    "tightenco/collect": "^8.75",
+    "vlucas/phpdotenv": "^5.4"
   },
   "autoload": {
     "psr-4": {

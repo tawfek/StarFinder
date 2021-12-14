@@ -2,6 +2,7 @@
 
 namespace StarFinder;
 
+use Tightenco\Collect\Support\Collection;
 use Wikidata\Wikidata;
 
 class Wiki
@@ -19,7 +20,7 @@ class Wiki
     protected function getQueryIdFromUrl()
     {
         preg_match('/(Q|P)\d+/i', $this->url, $matches);
-        return $matches[0];
+        return $matches[0] ?? false;
     }
 
     public  function getFullEntity()
@@ -43,16 +44,30 @@ class Wiki
             });
             $this->property = $property;
         }
-        return $this->property;
+        return $this->property->count() > 0 ? $this->property : false;
     }
     public function getImdbIds()
     {
         if (!$this->entity) {
             $this->getFullEntity();
         }
-        if (!$this->property) {
-            $this->getImdbPropery();
+        if ($this->getImdbPropery()) {
+            return ($this->property->values()->first()->values->first()->id);
         }
-        return ($this->property->values()->first()->values->first()->id);
+        return false;
+    }
+
+    public function getResponse()
+    {
+        $imdb_ids = $this->getImdbIds();
+        if ($imdb_ids) {
+            return [
+                "status" => "sucess",
+                "imdb_id" => $imdb_ids
+            ];
+        }
+        return [
+            "status" => "error",
+        ];
     }
 }
