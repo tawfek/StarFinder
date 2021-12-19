@@ -101,6 +101,13 @@ class imdb
     {
         if (empty($this->movies) && $this->person !== null) {
             $movies = $this->person->movies_actor();
+            $i =0 ;
+            foreach($movies as $movie){
+                $getMovie = new \Imdb\Title($movie['mid']) ;
+                $poster = $getMovie->photo() ;
+                $movies[$i]["poster"] = $poster ;
+                $i++;
+            }
             $this->movies = $movies;
             return $movies;
         }

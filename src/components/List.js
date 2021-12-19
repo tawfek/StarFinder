@@ -1,60 +1,52 @@
 import React, { Component } from "react";
-import {  Tooltip, Card, List, Icon } from "antd";
-import {setShowDrawer,setPersonInformation,setIsPersonDataLoading,setPersonFullInformation} from '../store/actions/index'
+import { Tooltip, List, Icon } from "antd";
+import {
+  setShowDrawer,
+  setPersonInformation,
+  setIsPersonDataLoading,
+  setPersonFullInformation,
+} from "../store/actions/index";
 import { connect } from "react-redux";
 import axios from "axios";
-const CancelToken = axios.CancelToken;
-let cancelRequest;
-
 function mapDispatchToProps(dispatch) {
   return {
-    setShowDrawer: value => dispatch(setShowDrawer(value)),
-    setPersonInformation : value => dispatch(setPersonInformation(value)),
-    setIsPersonDataLoading:value => dispatch(setIsPersonDataLoading(value)),
-    setPersonFullInformation: value => dispatch(setPersonFullInformation(value)),
+    setShowDrawer: (value) => dispatch(setShowDrawer(value)),
+    setPersonInformation: (value) => dispatch(setPersonInformation(value)),
+    setIsPersonDataLoading: (value) => dispatch(setIsPersonDataLoading(value)),
+    setPersonFullInformation: (value) =>
+      dispatch(setPersonFullInformation(value)),
   };
 }
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {
-    celebrities:state.celebrities,
-    imageUrl:state.imageUrl,
-    personInformationData:state.personInformationData,
-    showDrawer:state.showDrawer,
-  }
+    celebrities: state.celebrities,
+    imageUrl: state.imageUrl,
+    personInformationData: state.personInformationData,
+    showDrawer: state.showDrawer,
+  };
 }
 
-
-
 class ListInformation extends Component {
-  constructor(props) {
-    super(props);
-    // This binding is necessary to make `this` work in the callback
-  }
-
   getPersonFullInformation = (celebrity) => {
-    let person = celebrity
-    console.log(person) ;
-    if(person !== null){
-    this.props.setIsPersonDataLoading(true)
-    const url = `${process.env.REACT_APP_API_ENDPOINT}?wiki=${person.Urls[0]}`;
-    axios
-      .request({
-        method: "get",
-        url: url,
-        cancelToken: new CancelToken(function executor(c) {
-          cancelRequest = c;
-        }),
-      })
-      .then((response, t) => {
-        this.props.setIsPersonDataLoading(false)
-        this.props.setPersonFullInformation(response.data)
-      });
+    let person = celebrity;
+    console.log(person);
+    if (person !== null) {
+      this.props.setIsPersonDataLoading(true);
+      const url = `${process.env.REACT_APP_API_ENDPOINT}?wiki=${person.Urls[0]}`;
+      axios
+        .request({
+          method: "get",
+          url: url,
+        })
+        .then((response, t) => {
+          this.props.setIsPersonDataLoading(false);
+          this.props.setPersonFullInformation(response.data);
+        });
     }
   };
 
- 
   render() {
-    let { celebrities, imageUrl,personInformationData,showDrawer } = this.props;
+    let { celebrities, imageUrl } = this.props;
 
     return (
       <div>
@@ -104,14 +96,12 @@ class ListInformation extends Component {
                         position: "relative",
                         top: celebrity.Urls !== undefined ? "0" : "15px",
                       }}
-                      onClick={
-                        ()=>{
-                        if(celebrity.Urls.length>0){
-                          this.getPersonFullInformation(celebrity)
-                          this.props.setShowDrawer(true) 
+                      onClick={() => {
+                        if (celebrity.Urls.length > 0) {
+                          this.getPersonFullInformation(celebrity);
+                          this.props.setShowDrawer(true);
                         }
-                      }
-                      }
+                      }}
                       href="#!"
                     >
                       <Icon
@@ -145,10 +135,12 @@ class ListInformation extends Component {
             );
           }}
         ></List>
-
       </div>
     );
   }
 }
-const ListCelebrities = connect(mapStateToProps,mapDispatchToProps)(ListInformation);
+const ListCelebrities = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ListInformation);
 export default ListCelebrities;

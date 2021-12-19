@@ -275,19 +275,9 @@ background-position: center;
 
 
 .movies_title_h2{
-  text-align: left;
-  position: relative;
-  left: 4rem;
-  top:1rem ;
+  margin: 10px;
 }
-.ant-card-cover:hover .ant-card-cover::before{
-   content: "tofe" ;
-   position: red ;
-   background: red ;
-   color: yellowgreen ; 
-   z-index: 1000000;
-   width: 100%;height: 100%;;
-}
+
 .anotherbutton{
   background:var(--pcolor);
   background-image:url(/border.jpg);
@@ -365,4 +355,8 @@ background-position: center;
 
  .white{
    background:white;
+ }
+
+ .movie_link{
+   cursor: pointer;
  }

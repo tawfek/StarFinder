@@ -1,31 +1,31 @@
 import React, { Fragment } from 'react';
 import 'antd/dist/antd.css';
-import Cookies from 'universal-cookie';
 import Navbar from './components/navbar'
 import {Helmet} from "react-helmet";
+import {connect} from "react-redux"
 import './App.css'
 
+function mapStateToProps(state){
+  return {
+  darkTheme:state.darkTheme
+  }
+}
 
-function App() {
-  const cookies = new Cookies();
-  const theme = cookies.get('theme')
-   if(theme===undefined){
-     cookies.set('theme', 'light', { path: '/' });
-  } 
+function Application(props) {
+  const {darkTheme} = props
   return (<Fragment>
     <Helmet>
-
-
  {
-  (theme==="dark")? (<link rel="stylesheet" href={`/Dark.css`} />):''
+  (darkTheme)? (<link rel="stylesheet" href={`/Dark.css`} />):''
  }
 
 </Helmet>
  <Navbar/>
-
   </Fragment>
    
   );
 }
 
-export default App;
+const App = connect(mapStateToProps,{})(Application)
+
+export default  App;

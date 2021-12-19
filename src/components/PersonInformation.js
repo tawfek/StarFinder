@@ -1,39 +1,38 @@
-import React, { Component}from "react";
+import React, { Component } from "react";
 import { Avatar, Drawer, Card, Icon } from "antd";
-import MoviesList from "./MoviesList"
-import {connect} from "react-redux"
-import { setPersonInformation,setPersonFullInformation,setIsPersonDataLoading,setShowDrawer } from "../store/actions";
-
+import MoviesList from "./MoviesList";
+import { connect } from "react-redux";
+import {
+  setPersonInformation,
+  setPersonFullInformation,
+  setIsPersonDataLoading,
+  setShowDrawer,
+} from "../store/actions";
 
 const { Meta } = Card;
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {
-    showDrawer:state.showDrawer,
-    personInformationData:state.personInformationData,
-    isPersonDataLoading:state.isPersonDataLoading,
-    personFullInformation:state.personFullInformation,
-  }
+    showDrawer: state.showDrawer,
+    personInformationData: state.personInformationData,
+    isPersonDataLoading: state.isPersonDataLoading,
+    personFullInformation: state.personFullInformation,
+  };
 }
 function mapDispatchToProps(dispatch) {
   return {
-    setPersonInformation:(person)=>dispatch(setPersonInformation(person)),
-    setIsPersonDataLoading:(loading)=>dispatch(setIsPersonDataLoading(loading)),
-    setShowDrawer: value => dispatch(setShowDrawer(value)),
-    setPersonFullInformation:information => dispatch(setPersonFullInformation(information)),
-  }
+    setPersonInformation: (person) => dispatch(setPersonInformation(person)),
+    setIsPersonDataLoading: (loading) =>
+      dispatch(setIsPersonDataLoading(loading)),
+    setShowDrawer: (value) => dispatch(setShowDrawer(value)),
+    setPersonFullInformation: (information) =>
+      dispatch(setPersonFullInformation(information)),
+  };
 }
 
 class Person extends Component {
-  constructor(props) {
-    super(props);
-   }
-
-
-
-
   onClose = () => {
-    this.props.setShowDrawer(false)
+    this.props.setShowDrawer(false);
   };
 
   render() {
@@ -91,16 +90,18 @@ class Person extends Component {
                 theme="filled"
               />,
               "  ",
-              (personFullInformation!= null)? personFullInformation.name : "NONAME",
+              personFullInformation != null
+                ? personFullInformation.name
+                : "NONAME",
             ]}
             description={<PersonInformation />}
           />
-          {!isPersonDataLoading ?  <MoviesList  />:''}
+          {!isPersonDataLoading ? <MoviesList /> : ""}
         </Card>
       </Drawer>
     );
   }
 }
 
-const PersonInformation = connect(mapStateToProps,mapDispatchToProps)(Person)
+const PersonInformation = connect(mapStateToProps, mapDispatchToProps)(Person);
 export default PersonInformation;

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Header from "../components/header";
 import { Helmet } from "react-helmet";
-import {  Alert, Row, Col, Timeline, Icon } from "antd";
+import { Alert, Row, Col, Timeline, Icon } from "antd";
 class Howtouse extends Component {
   render() {
     return (
@@ -178,7 +178,6 @@ class Howtouse extends Component {
                 />
                 <br></br>
                 <br></br>
-              
               </Col>
             </Row>
           </Col>

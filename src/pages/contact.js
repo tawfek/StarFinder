@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Header from "../components/header";
 import { Helmet } from "react-helmet";
-import {  Row, Col, Button, Icon } from "antd";
+import { Row, Col, Button, Icon } from "antd";
 class Contact extends Component {
   render() {
     return (
@@ -28,8 +28,7 @@ class Contact extends Component {
                 </h1>
                 <br />
                 let's talk on Facebook, telegram and email For any further
-                information or questions :
-                <br></br>
+                information or questions :<br></br>
                 <a
                   href="https://fb.com/t200o"
                   target="_blank"
@@ -44,7 +43,7 @@ class Contact extends Component {
                     }}
                   >
                     <Icon theme="filled" type="facebook" />
-                     facebook
+                    facebook
                   </Button>
                 </a>
                 <a
@@ -60,7 +59,7 @@ class Contact extends Component {
                       color: "white",
                     }}
                   >
-                    <Icon type="message" />  Telegram
+                    <Icon type="message" /> Telegram
                   </Button>
                 </a>
                 <a
@@ -77,7 +76,7 @@ class Contact extends Component {
                     }}
                   >
                     <Icon type="mail" />
-                     E-mail
+                    E-mail
                   </Button>
                 </a>
                 <br />
