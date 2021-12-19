@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.7.0",
     "antd": "^3.26.20",
     "axios": "^0.19.2",
     "axios-progress-bar": "^1.2.0",
@@ -14,9 +15,11 @@
     "react-iframe": "^1.8.0",
     "react-image-lightbox": "^5.1.4",
     "react-modal-image": "^2.5.0",
+    "react-redux": "^7.2.6",
     "react-responsive-embed": "^2.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1",
+    "redux": "^4.1.2",
     "reqwest": "^2.0.5",
     "universal-cookie": "^4.0.4"
   },
@@ -42,6 +45,8 @@
     ]
   },
   "devDependencies": {
-    "react-alice-carousel": "^1.19.3"
+    "react-alice-carousel": "^1.19.3",
+    "redux-thunk": "^2.3.0",
+    "remote-redux-devtools": "^0.5.16"
   }
 }

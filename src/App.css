@@ -2,9 +2,9 @@
 @import '~antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Literata&display=swap');
-/* @import 'your-theme-file.less'; // variables to override above */
 :root{
   --pcolor:#424242;
+  --poster-max-width:250px;
 }
 body{
   
@@ -223,6 +223,7 @@ background-position: center;
   min-height: 182px;
   border-radius: 10px !important;
   border:0 !important;
+  max-width: var(--poster-max-width);
   /* margin:10px ; */
   box-shadow: 1px 3px 3px #dfdfdf;
 }
@@ -239,6 +240,7 @@ background-position: center;
   /* background: yellow; */
   border-radius: 10px;
   padding: 10px;
+
 }
 
 .mov_col{
@@ -248,6 +250,7 @@ background-position: center;
   margin: 0 !important;
   border-radius: 10px;
    border-radius: 10px !important;
+  
 }
 .alice-carousel__stage-item{
   margin:10px;
@@ -255,6 +258,7 @@ background-position: center;
   margin-top: 0;
   border:0  !important;
   border-radius: 10px;
+  max-width: var(--poster-max-width);
 }
 
 .trbody{
@@ -273,7 +277,8 @@ background-position: center;
 .movies_title_h2{
   text-align: left;
   position: relative;
-  left: 3vh;
+  left: 4rem;
+  top:1rem ;
 }
 .ant-card-cover:hover .ant-card-cover::before{
    content: "tofe" ;
@@ -361,10 +366,3 @@ background-position: center;
  .white{
    background:white;
  }
- /*  Todo 
-
- make titles and meta tags 
- make site favIcon & logo for social media 
- put google analysis 
- 
- */

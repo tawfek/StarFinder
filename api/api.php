@@ -6,7 +6,6 @@ use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable('../');
 $dotenv->load();
-
 sendJsonHeader();
 $api = new StarFinder ;
 if (isset($_GET['rekognition'])) {

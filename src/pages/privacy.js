@@ -8,7 +8,7 @@ import {Helmet} from "react-helmet";
     return (
  <Fragment>
       <Helmet> 
-  <title>Privacy Policy | Starfinder.me</title>
+  <title>Privacy Policy | Starfinder</title>
   <meta name="og:title" content="Privacy Policy | Starfinder.me"/>
 
       </Helmet>
