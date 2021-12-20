@@ -51,7 +51,7 @@ class HeaderComponent extends Component {
                   className="card-define white biglogo"
                   style={{ width: "100%" }}
                 >
-                  <span style={{ fontSize: "1.8rem", position: "relative" }}>
+                  <span style={{ fontSize: "1.5rem", position: "relative" }}>
                     <Icon
                       theme="filled"
                       type="star"

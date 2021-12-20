@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import Navbar from './components/navbar'
 import {Helmet} from "react-helmet";
 import {connect} from "react-redux"
-import './App.css'
+import './styles/App.css'
 
 function mapStateToProps(state){
   return {
@@ -16,7 +16,7 @@ function Application(props) {
   return (<Fragment>
     <Helmet>
  {
-  (darkTheme)? (<link rel="stylesheet" href={`/Dark.css`} />):''
+  (darkTheme)? (<link rel="stylesheet" href={`/styles/Dark.css`} />):''
  }
 
 </Helmet>
