@@ -8,7 +8,7 @@ class imdb
     public $id, $config;
     protected $person;
     protected $movies = [];
-    public function __construct($url, $language = "en-US,en", $EnableCache = true, $cacheDir = "cache")
+    public function __construct($url, $language = "en-US,en", $EnableCache = true, $cacheDir = "./cache")
     {
         $this->id = $this->getImdbIdFromUrl($url);
         $this->config = new \Imdb\Config();

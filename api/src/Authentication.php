@@ -2,7 +2,7 @@
 
 namespace StarFinder;
 
-use Aws\credentials\Credentials as aws_auth;
+use Aws\Credentials\Credentials ;
 
 class Authentication
 {
@@ -52,7 +52,7 @@ class Authentication
     public function boot()
     {
         try {
-            $auth = new aws_auth($this->ACCESS_KEY_ID, $this->SECRET_ACCESS_KEY);
+            $auth = new Credentials($this->ACCESS_KEY_ID, $this->SECRET_ACCESS_KEY);
             $this->credentials = $auth;
             $this->options['credentials'] = $this->getCredentials();
             return $auth;
@@ -61,7 +61,7 @@ class Authentication
         }
         return false;
     }
-    public function getResponse()
+    public function getResponse() 
     {
         return $this->response;
     }
