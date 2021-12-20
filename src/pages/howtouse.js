@@ -53,7 +53,7 @@ class Howtouse extends Component {
                   alt="How to use"
                   className="htuimg"
                   style={{ paddingBottom: 10 }}
-                  src="/images/howtouse/htu.jpg"
+                  src={`${process.env.REACT_APP_GT_REPO_NAME}/images/howtouse/htu.jpg`}
                 />
                 <span className="pbold"> 3. </span> After you selected the
                 picture we will be processing it. The process will not take time
@@ -76,7 +76,7 @@ class Howtouse extends Component {
                   alt="uploading proccess"
                   className="htuimg"
                   style={{ paddingBottom: 10 }}
-                  src="/images/howtouse/uploading.jpg"
+                  src={`${process.env.REACT_APP_GT_REPO_NAME}/images/howtouse/uploading.jpg`}
                 />
                 <br></br>
                 <br></br>
@@ -86,7 +86,7 @@ class Howtouse extends Component {
                       <img
                         alt="AWS"
                         style={{ width: 40, background: "rgba(0,0,0,0)" }}
-                        src="/images/howtouse/aws.png"
+                        src={`${process.env.REACT_APP_GT_REPO_NAME}/images/howtouse/aws.png`}
                       />
                       Amazon Web Services
                     </div>
@@ -133,7 +133,7 @@ class Howtouse extends Component {
                   alt="AI result"
                   className="htuimg"
                   style={{ paddingBottom: 10 }}
-                  src="/images/howtouse/result.jpg"
+                  src={`${process.env.REACT_APP_GT_REPO_NAME}/images/howtouse/result.jpg`}
                 />
                 <br></br>
                 <br></br>
@@ -166,7 +166,7 @@ class Howtouse extends Component {
                   alt="Movies"
                   className="htuimg"
                   style={{ paddingBottom: 10 }}
-                  src="/images/howtouse/movies.jpg"
+                  src={`${process.env.REACT_APP_GT_REPO_NAME}/images/howtouse/movies.jpg`}
                 />
                 <br></br>
                 <br></br>

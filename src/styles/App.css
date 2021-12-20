@@ -8,7 +8,7 @@
 }
 body{
   
-  background: url(/images/162.jpg);
+  background: url(./images/162.jpg);
    
    background-attachment: fixed;
   background-clip: content-box;
@@ -40,8 +40,7 @@ background-position: center;
   padding: 5px;
   border-bottom-left-radius: 0 ;
   border-bottom-right-radius: 0;
-  background: url(/images/border.jpg);
-  
+  background: url(./images/border.jpg);
  }
 .logo{
   display:flex;
@@ -147,7 +146,7 @@ background-position: center;
 .trbody{
   position: fixed;
   content: "";
-  background:  linear-gradient(transparent,#fff),url(/images/bg.jpg);
+  background:  linear-gradient(transparent,#fff),url(./images/bg.jpg);
   width: 100%;
   top: 0;
   height: 100vh;
@@ -162,7 +161,7 @@ background-position: center;
 
 .anotherbutton{
   background:var(--pcolor);
-  background-image:url(/images/border.jpg);
+  background-image:url(./images/border.jpg);
   border-radius:10px;
   border-top-left-radius:0;
   border-top-right-radius:0;
@@ -175,7 +174,7 @@ background-position: center;
    transition: all 1s;
 }
 .anotherbutton:hover{
-  background-image:url(/images/border.jpg);
+  background-image:url(./images/border.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
