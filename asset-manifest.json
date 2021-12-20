@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/StarFinder/static/css/main.7889c6c0.chunk.css",
-    "main.js": "/StarFinder/static/js/main.364b9efc.chunk.js",
-    "main.js.map": "/StarFinder/static/js/main.364b9efc.chunk.js.map",
+    "main.css": "/StarFinder/static/css/main.b2870af4.chunk.css",
+    "main.js": "/StarFinder/static/js/main.e8b7d12f.chunk.js",
+    "main.js.map": "/StarFinder/static/js/main.e8b7d12f.chunk.js.map",
     "runtime~main.js": "/StarFinder/static/js/runtime~main.75a2a46d.js",
     "runtime~main.js.map": "/StarFinder/static/js/runtime~main.75a2a46d.js.map",
     "static/css/2.bd1bf5d2.chunk.css": "/StarFinder/static/css/2.bd1bf5d2.chunk.css",
-    "static/js/2.6de74d83.chunk.js": "/StarFinder/static/js/2.6de74d83.chunk.js",
-    "static/js/2.6de74d83.chunk.js.map": "/StarFinder/static/js/2.6de74d83.chunk.js.map",
+    "static/js/2.361a5c6d.chunk.js": "/StarFinder/static/js/2.361a5c6d.chunk.js",
+    "static/js/2.361a5c6d.chunk.js.map": "/StarFinder/static/js/2.361a5c6d.chunk.js.map",
     "index.html": "/StarFinder/index.html",
-    "precache-manifest.8f23790c2646cb5696240527ebe5eb28.js": "/StarFinder/precache-manifest.8f23790c2646cb5696240527ebe5eb28.js",
+    "precache-manifest.d08c2c9a1a4dbe3b0d5c8cc7563994ec.js": "/StarFinder/precache-manifest.d08c2c9a1a4dbe3b0d5c8cc7563994ec.js",
     "service-worker.js": "/StarFinder/service-worker.js",
     "static/css/2.bd1bf5d2.chunk.css.map": "/StarFinder/static/css/2.bd1bf5d2.chunk.css.map",
-    "static/css/main.7889c6c0.chunk.css.map": "/StarFinder/static/css/main.7889c6c0.chunk.css.map"
+    "static/css/main.b2870af4.chunk.css.map": "/StarFinder/static/css/main.b2870af4.chunk.css.map",
+    "static/media/App.css": "/StarFinder/static/media/border.7b2c558e.jpg"
   }
 }

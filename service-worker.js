@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/StarFinder/precache-manifest.8f23790c2646cb5696240527ebe5eb28.js"
+  "/StarFinder/precache-manifest.d08c2c9a1a4dbe3b0d5c8cc7563994ec.js"
 );
 
 self.addEventListener('message', (event) => {
