@@ -2,6 +2,9 @@
 # StarFinder
 Best AI to detect celebrities from picture.
 [see demo](https://starfinder.tprojects.eu)
+
+## Requirements
+ `nodejs` `php ^7` `composer`
 ## Setting up frontend
 1. clone the repo `https://github.com/tawfek/StarFinder.git`
 2. run `npm run install` command , to install dependencies
