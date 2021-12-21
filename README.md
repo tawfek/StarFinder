@@ -1,6 +1,6 @@
 ![starfinder](https://raw.githubusercontent.com/tawfek/StarFinder/main/src/styles/images/162.jpg)
 # StarFinder
-Best AI to detect celebrities from picture.
+ AI to detect celebrities from picture using aws celebrities recognition api.
 [see demo](https://starfinder.tprojects.eu)
 
 ## Requirements
