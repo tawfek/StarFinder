@@ -29,6 +29,8 @@ background-position: center;
   padding:0;
   backdrop-filter: blur(30px);
   background: rgba(250,250,250,0.2);
+  border-top: 2px solid #e0e0e0;
+  
 }
 .bshadow{
   border-radius: 4px;
