@@ -2,7 +2,7 @@
   "name": "starfinder",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://tawfek.github.io/StarFinder",
+  "homepage": "/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.0",
     "antd": "^3.26.20",
