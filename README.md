@@ -1,7 +1,7 @@
 ![starfinder](https://raw.githubusercontent.com/tawfek/StarFinder/main/src/styles/images/162.jpg)
 # StarFinder
  AI to detect celebrities from picture using aws celebrities recognition api.
-[see demo](https://starfinder.tprojects.eu)
+[see demo](https://starfinder.tawfekm.com)
 
 ## Requirements
  `nodejs` `php ^7` `composer`
